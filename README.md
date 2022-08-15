@@ -1,12 +1,16 @@
-# Z80 Core for Arduino Mega
+# Z80 Core for Arduino RP2040 (Raspberry Pi Pico)
 
-**This library only functions with the Arduino Mega or Mega 2560 due to memory constraints!**
+This is a free, open source project which comprises light modification of Jack Kingsman's Z80Mega library for Arduino Megas.
 
-This is a free, open source project which comprises light modification of Marat Fayzullin's brilliant Z80 emulator in C in order to make it compatible with the Arduino Mega (other Arduinos do not have the memory to run it). You can view his [download page for the original code here](https://fms.komkon.org/EMUL8/). This library is based off of [`Z80-081707.zip`](https://fms.komkon.org/EMUL8/Z80-081707.zip).
+Which itself is a light modification of Marat Fayzullin's brilliant Z80 emulator in C in order to make it compatible with the Arduino RP2040 controller. You can view his [download page for the original code here](https://fms.komkon.org/EMUL8/). This library is based off of [`Z80-081707.zip`](https://fms.komkon.org/EMUL8/Z80-081707.zip).
 
 Reading over `Z80.h` is strongly encouraged to get a feel for the bitfields and core CPU structs, as well as the functions you must implement (see *Usage* below) and optional ones you can enable with by `#define`ing flags (such as running until `HALT` or running n cycles at a time as opposed to one opcode at a time, which is the default behavior).
 
 *THIS IS FIRST AND FOREMOST MARAT FAYZULLIN'S CODE AND HARD WORK. ALL I'VE DONE IS MAKE MINOR COMPATIBILITY AND CONVENIENCE MODIFICATIONS. USAGE IS SUBJECT TO HIS LICENSE TERMS ALONE.*
+
+Changes for the Pico:
+* Remove deprecated "register" keyword.
+* Other... (Need to add)
 
 The changes comprise:
 
