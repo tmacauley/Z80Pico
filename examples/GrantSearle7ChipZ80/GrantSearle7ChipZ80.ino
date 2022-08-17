@@ -1,6 +1,6 @@
 /* 
-* This demo program simulates Grant Searle's 7 chip Z80
-* Modifications:
+* This example program simulates Grant Searle's 7 chip Z80
+* Modifications to Grant's design:
 *   RAM shadows the ROM - writing to the ROM addresses will write to the shadow RAM.
 *   Added ram_page variable to bank switch ROM to RAM.
 */
@@ -23,9 +23,6 @@
 #define STEP_DELAY 300
 
 // #define DEBUG
-
-
-
 
 // Create ram
 byte Z80ram[Z80_RAMSIZE];
@@ -126,7 +123,7 @@ void setup() {
   Serial.begin(115200);
 
   // wait for terminal to come online
-  while(!Serial.available()){
+  while(!Serial.available()) {
     delay(1000);
     Serial.print('.');
   }
